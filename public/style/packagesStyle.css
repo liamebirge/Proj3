@@ -1,0 +1,67 @@
+.WoofPack{
+	margin: auto;
+	height: 425px;
+    width: 680;
+	background-image: url("Pictures/woofpack.jpg");
+    position: center;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(212, 212, 212);
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+.dogsunleashed{
+	margin: auto;
+	height: 425px;
+    width: 680;
+	background-image: url("Pictures/dogs-unleashed.jpg");
+    position: center;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(212, 212, 212);
+    margin-bottom: 20px;
+}
+#kingpup{
+	margin: auto;
+	height: 425px;
+    width: 680;
+	background-image: url("Pictures/Kingpup.jpg");
+    position: center;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(212, 212, 212);
+    margin-bottom: 20px;
+}
+
+.goldenleash{
+	margin: auto;
+	height: 425px;
+    width: 680;
+	background-image: url("Pictures/goldenleash.jpg");
+    position: center;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: rgb(212, 212, 212);
+    margin-bottom: 20px;
+}
+.packageheader{
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+	-webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-size: 60;
+    font-weight: bold;
+}
+.packagetext{
+    text-align: center;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    font-size: 20;
+
+}
+.packagelist{
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    font-size: 20;
+}

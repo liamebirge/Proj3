@@ -1,0 +1,90 @@
+section{
+	min-width: 1000px
+}
+header, .navButtons{
+	min-width: 600px;
+}
+small{
+	font-size: 10px;
+}
+#container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.imgGallery {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:0px;
+    padding-left:1%;
+    padding-right:5%;
+    margin:0px;
+    margin-right:10px;
+}
+
+.imgGallery img{
+	width: 320%;
+	max-height: 40%;
+	position: center;
+    border: 5px ridge rgb(212, 212, 212);
+    margin:5px;
+}
+a.imgLink{
+	border:none;
+	background-color: inherit;
+	margin:10px;
+	padding:0px;
+}
+.infoBttn:hover .infoContent {
+    display: block;
+    float: unset;
+}
+.infoContent {
+    display: none;
+    background: #A7B39B;
+    padding: 10px;
+    margin-left:20px;
+    margin-top:-30px;
+    width:200px;
+    height:50px;
+    position: absolute;
+    z-index: 1000;
+    border:1px solid black;
+    border-radius: 12px;
+}
+.infoBttn {
+    margin:0px;
+    padding:0px;
+    border:1px solid black;
+    border-radius: 3px;
+    width: 25px;
+    height:25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContent a{
+	border:none;
+	background-color: inherit;
+	padding:0px;
+	margin:0px;
+	text-decoration: underline;
+}
+.infoContent a:hover{
+	text-decoration-color:grey;
+}
+.walkInfo{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+fieldset{
+	width:400px;
+}
+#adminLink{
+    text-decoration: none;
+    color: black;
+}

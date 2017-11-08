@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Book a Walk</title>
+		<link rel="shortcut icon" href="https://liamebirge.github.io/dogWalking/Pictures/dog.png" />
+
+		<script href="dogWalk.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="dogWalkingStyle.css" />
+		<link rel="stylesheet" type="text/css" href="bookAWalkStyle.css" />
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<header>
+			<div class="headerText">
+				<h1>Book A Walk</h1>
+			</div>
+			<div class="navButtons">
+				<a href="index.html">About Us</a>
+				<a href="routes.html">Routes</a>
+				<a href="packages.html">Packages</a>
+				<a href="bookAWalk.html"><u>Book A Walk</u></a>
+			</div>
+		</header>
+		<hr />
+		<section class="bawSection">
+			<div id="container">
+				<div class="imgGallery">
+					<a class="imgLink" href="https://liamebirge.github.io/dogWalking/Pictures/majesticMountainDog.png">
+						<img src="https://liamebirge.github.io/dogWalking/Pictures/majesticMountainDog.png" alt="A Majestic Wind Blown Dogg" />
+					</a>
+					<a class="imgLink" href="https://liamebirge.github.io/dogWalking/Pictures/pancakeEarDog.jpg">
+						<img src="https://liamebirge.github.io/dogWalking/Pictures/pancakeEarDog.jpg" alt="A Dog With Large Ears" />
+					</a>		
+				</div>
+				<div id="form">
+					<form action="#">
+						<fieldset class="contact">
+							<legend>Name:</legend>
+							<input type="text" name="firstName" required="required" placeholder="First Name" />*<br />
+							<input type="text" name="lastName" required="required" placeholder="Last Name" />*<br />
+						</fieldset>
+						<!--phone number, email, route/length of walk-->
+						<fieldset class="contact">
+							<legend>Contact Info:</legend>
+							Phone: <input type="phoneNumber" name="phoneNumber" required="required" placeholder="###-###-####" />*<br />
+							Email: <input type="email" name="email" required="required" placeholder="example@email.com" />*<br />
+						</fieldset>
+						<fieldset class="contact">
+							<legend>Walk Info:</legend>
+							Walk Package:<br />
+							<div class="walkInfo">
+								<select id="walkSelect" required="required">
+									<option value="" disabled="disabled" selected="selected">Please select a package</option>
+									<option value="1">Dogs Unleashed</option>
+									<option value="2">Woof Pack</option>
+									<option value="3">King Pup</option>
+									<option value="4">Golden Leash</option>
+								</select>*&emsp;
+								<div class="infoBttn">?
+									<div class="infoContent">
+										Info on Walk Packages can be found <a href="packages.html">here</a>
+									</div>
+								</div>
+							</div>
+							<br />
+							<div class="dateTime">
+								Date and Time:<br />
+								<input required="required" type="Date" name="walkDate" />*
+								<input required="required" type="Time" name="walkTime">*
+							</div>
+							<br />
+							Comments:<br />
+							<textarea placeholder="Tell us a bit about your dog(s)!"></textarea><br />
+							<small>* = Required Field</small>
+						</fieldset>
+						<input id="submitBttn" type="submit" value="Submit" />
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<b><company>Tails a Waggin' Dog Walking</company></b><br />
+			Phone: <a href="https://liamebirge.github.io/dogWalking/adminLogin.html" id="adminLink"><u><phone>250-DOG-PAWS</phone></u></a><br />
+			Email: <u><email><a class="email" href="mailto:tails-a-waggin@gmail.com?Subject=Dog%20walking" target="_top">tails-a-waggin'@gmail.com</a></email></u>
+		</footer>
+	</body>
+</html>

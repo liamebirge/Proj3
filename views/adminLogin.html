@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Admin Login</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="adminStyle.css" type="text/css" />
+		<script type="text/javascript">
+			function login(){
+				var username = document.getElementById('adminUsername').value;
+				var password = document.getElementById('adminPassword').value;
+				if(username === "wagginAdmin"){
+					if (password === "pa$$B@rk"){
+						var win = window.open('admin.html', "_self");
+						win.focus();
+					} else {
+						var error = document.getElementById('errorMessage');
+						error.innerHTML = "Sorry, your password is incorrect. Please try again";
+						username.value = "";
+					}
+				} else {
+					var error = document.getElementById('errorMessage');
+					error.innerHTML = "Sorry, your username or pasword is incorrect. Please try again";
+					username.value = "";
+				}
+			}
+			function cancel(){
+				var win = window.open('bookAWalk.html', "_self");
+				win.focus();
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1><u>Admin Login</u></h1>
+		</header>
+		<hr />
+		<section>
+			<div id="container">
+				<div id="loginForm">
+					<div id="loginHeader">
+						<h4>Log in to database </h4>
+						<div id="errorMessage" style="color:red;"></div>
+					</div>
+					<hr />
+					<div id="loginDetails">
+						<div class="username">
+							<label for="adminUsername">Username:</label>
+							<input id="adminUsername" type="username" name="adminUsername" />
+						</div>
+						<div class="password">
+							<label for="adminPass">Password:</label>
+							<input id="adminPassword" type="password" name="adminPass" />
+						</div>
+					</div>
+					<div class="buttons">
+						<button onclick="login()">Logon</button>
+						<button onclick="cancel()">Cancel</button>
+					</div>
+					<div id="loginFooter">
+						<small>
+							Email Tails A Waggin' with proof of identity if you forgot your username or password
+						</small>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

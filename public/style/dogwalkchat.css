@@ -1,0 +1,56 @@
+.chatbox-container {
+  border: 1px solid #000;
+  width: 300px;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+}
+
+.chatbox_lower-container {
+  height: 1;
+  
+}
+
+.chatbox_lower-container__open {
+  height: 200px;
+}
+
+.chatbox_header {
+  background: blue;
+  color: white;
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.chatbox_convo-area {
+  display: flex;
+  flex-direction: column;
+  color:white;
+}
+
+.chatbox_convo_bubble {
+  max-width: 150px;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.chatbox_convo_bubble__other {
+  background: gray;
+  align-self: flex-start;
+}
+
+.chatbox_convo_bubble__you {
+  background: blue;
+  color: white;
+  align-self: flex-end;
+}
+
+.chatbox_input {
+  width: 70%;
+}
+
+.chatbox_send-btn {
+  width: 20%;
+}

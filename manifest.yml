@@ -1,0 +1,11 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: Untangling
+  host: Untangling
+  disk_quota: 1024M
+  services:
+  - Cloud Object Storage-6j
+  - Untangling-cloudantNoSQLDB

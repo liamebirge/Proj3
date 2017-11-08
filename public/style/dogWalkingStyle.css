@@ -1,0 +1,93 @@
+body{
+	font-family: "Times New Roman", Georgia, Sans-Serif;
+	background-color: #DEC8AF;
+}
+header{
+	text-align: center;
+	height: 130px;
+	background-image: url("Pictures/headerpackages.jpg");
+}
+header h1{
+	font-size: 90px;
+	color: rgb(88, 165, 136);
+    text-shadow: rgb(0, 0, 0) 0px 0px 1px;
+	-webkit-font-smoothing: antialiased;
+}
+header .navButtons{
+	display: flex;
+	justify-content: space-around;
+	position:absolute;
+	margin-top:-20px;
+}
+header a{
+	margin-bottom: -9px;
+}
+section{
+	min-height: 600px;
+	margin-top:150px;
+}
+footer{
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1em;
+	background-color: #A7B39B;
+	text-align: center;
+	height:70px;
+	width:99%;
+}
+footer a{
+	border:none;
+	background-color: #A7B39B;
+	padding:2px;
+	margin:0px;
+}
+footer a:hover{
+	background-color: #A7B39B;
+	border:none;
+	color:#644D3C;
+}
+a{
+	border:1px solid black;
+	border-radius:3px;
+	margin-bottom:-10px;
+	width:100px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+a, a:visited{
+	text-decoration: none;
+	color:black;
+	padding:10px;
+	margin:5px;
+}
+a:hover{
+	text-decoration: none;
+	color:black;
+	border:1px dotted black;
+}
+fieldset{
+	width:500px;
+	margin-top:10px;
+	margin-bottom
+}
+fieldset textarea{
+	width:70%;
+	height:100px;
+}
+fieldset input, fieldset select, fieldset textarea{
+	margin:10px;
+	background-color: #C7A379;
+}
+#submitBttn{
+	margin-top:10px;
+	width:100px;
+}
+div{
+	width:100%;
+}
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
