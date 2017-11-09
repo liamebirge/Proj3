@@ -5,6 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+vcap-local.json
+
 # Runtime data
 pids
 *.pid
