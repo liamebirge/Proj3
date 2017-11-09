@@ -1,6 +1,4 @@
-/**
- * Module dependencies.
- */
+/* Module dependencies */
 
 var express = require('express'),
     routes = require('./routes'),
@@ -8,6 +6,15 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     fs = require('fs');
+
+// Authentication module.
+var auth = require('http-auth');
+var basic = auth.basic({
+    realm: "auth-db",
+    file: __dirname + "/public/data/passwords"
+});
+
+console.log(basic);
 
 var app = express();
 
@@ -29,7 +36,7 @@ var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3003);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -91,6 +98,9 @@ function initDBConnection() {
 initDBConnection();
 
 app.get('/', routes.index);
+app.get('/routes.html', routes.routes);
+app.get('/packages.html', routes.packages);
+app.get('/bookAWalk.html', routes.bookAWalk);
 
 function createResponseData(id, name, value, attachments) {
 
@@ -428,6 +438,9 @@ app.get('/api/favorites', function(request, response) {
     });
 
 });
+
+app.use(auth.connect(basic));
+app.get('/admin.html', routes.admin);
 
 
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
