@@ -1,7 +1,5 @@
 body{
 	background-color: #DEC8AF;
-}
-input{
 	background-color: #C7A379;
 }
 header{
@@ -18,37 +16,16 @@ td{
 button{
 	margin:5px;
 }
-#container{
-	border:1px solid black;
-	border-radius: 4px;
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	width: 400px;
-	margin-right:auto;
-	margin-left:auto;
+section{
+	min-height: 400px;
 }
-#loginHeader, #loginFooter{
+footer{
+	position: relative;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1em;
+	background-color: #efefef;
 	text-align: center;
-}
-#loginFooter{
-	font-size: 12px;
-}
-#loginForm, #loginDetails, .username, .password{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: space-between;
-	margin-left:30px;
-	margin-right:30px;
-}
-.buttons{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-bottom:15px;
-}
-input{
-	margin-top:5px;
-	margin-bottom: 20px;
+	height:50px;
 }

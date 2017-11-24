@@ -3,9 +3,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: Untangling
-  host: Untangling
+  name: Skylertest1
+  host: Skylertest1
   disk_quota: 1024M
   services:
-  - Cloud Object Storage-6j
-  - Untangling-cloudantNoSQLDB
+  - Skylertest1-cloudantNoSQLDB

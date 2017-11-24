@@ -1,65 +1,19 @@
 {
-    "AvailabilityMonitoring": [
-        {
-            "credentials": {
-                "cred_url": "https://perfbroker.ng.bluemix.net",
-                "token": "fusxg5WY6HMM/hZzCE86hy6yG/Jm8vDbX0TE4AXCAiBDzzk57F7TCsVnaAVAROYMNE1RKOqV9GmEC3Ktv5BYH/oZX+adDFUj6+DT6R3GG38="
-            },
-            "syslog_drain_url": null,
-            "volume_mounts": [],
-            "label": "AvailabilityMonitoring",
-            "provider": null,
-            "plan": "Lite",
-            "name": "availability-monitoring-auto",
-            "tags": [
-                "ibm_created",
-                "bluemix_extensions",
-                "dev_ops",
-                "lite"
-            ]
-        }
-    ],
-    "cloud-object-storage": [
-        {
-            "credentials": {
-                "apikey": "Ew37DMNVUJ6mble5FiDeepNNGSFY8E8Xzgcv0qLElQ35",
-                "endpoints": "https://cos-service.bluemix.net/endpoints",
-                "iam_apikey_description": "Auto generated apikey during resource-bind operation for Instance - crn:v1:bluemix:public:cloud-object-storage:global:a/eaa4b032dc6a81fccb384c8ac5a5fa39:949860a0-c2a6-4028-b232-ba07e7760944::",
-                "iam_apikey_name": "auto-generated-apikey-befa3cc8-a8e3-42cf-9a4e-593a88248424",
-                "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Reader",
-                "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/eaa4b032dc6a81fccb384c8ac5a5fa39::serviceid:ServiceId-8a144e5d-9492-4b20-a580-d55240b9f04f",
-                "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/eaa4b032dc6a81fccb384c8ac5a5fa39:949860a0-c2a6-4028-b232-ba07e7760944::"
-            },
-            "syslog_drain_url": null,
-            "volume_mounts": [],
-            "label": "cloud-object-storage",
-            "provider": null,
-            "plan": "Lite",
-            "name": "Cloud Object Storage-6j",
-            "tags": [
-                "Lite",
-                "storage",
-                "ibm_release",
-                "ibm_created",
-                "rc_compatible"
-            ]
-        }
-    ],
     "cloudantNoSQLDB": [
         {
             "credentials": {
-                "username": "63a09176-51e6-49b1-be2a-7a22bdec289f-bluemix",
-                "password": "26ac69769cea51827ffdb4f4a728f1cdc616b7bcd3a8c3e9401da46739ec6877",
-                "host": "63a09176-51e6-49b1-be2a-7a22bdec289f-bluemix.cloudant.com",
+                "username": "8e3a5a8e-c81d-403e-bdbd-ea4dfecb55a2-bluemix",
+                "password": "9faf8fd0f6cccf53e23ac17095aee710bb36537ec15fa1d5127b0be747b9f344",
+                "host": "8e3a5a8e-c81d-403e-bdbd-ea4dfecb55a2-bluemix.cloudant.com",
                 "port": 443,
-                "url": "https://63a09176-51e6-49b1-be2a-7a22bdec289f-bluemix:26ac69769cea51827ffdb4f4a728f1cdc616b7bcd3a8c3e9401da46739ec6877@63a09176-51e6-49b1-be2a-7a22bdec289f-bluemix.cloudant.com"
+                "url": "https://8e3a5a8e-c81d-403e-bdbd-ea4dfecb55a2-bluemix:9faf8fd0f6cccf53e23ac17095aee710bb36537ec15fa1d5127b0be747b9f344@8e3a5a8e-c81d-403e-bdbd-ea4dfecb55a2-bluemix.cloudant.com"
             },
             "syslog_drain_url": null,
             "volume_mounts": [],
             "label": "cloudantNoSQLDB",
             "provider": null,
             "plan": "Lite",
-            "name": "Untangling-cloudantNoSQLDB",
+            "name": "Skylertest1-cloudantNoSQLDB",
             "tags": [
                 "data_management",
                 "ibm_created",

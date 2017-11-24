@@ -1,5 +1,0 @@
-^link stylesheets
-^linking other pages
-^link js
-ejs footer
-use authenticator

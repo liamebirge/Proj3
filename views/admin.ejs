@@ -4,7 +4,8 @@
 		<title>Admin</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="adminStyle.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="/../public/style/adminStyle.css" />
+		<script type="text/javascript" src="../public/scripts/ejs_production.js"></script>
 	</head>
 	<body>
 		<header>
@@ -36,5 +37,8 @@
 			</table>
 			<button onclick="window.location.reload();">Refresh</button>
 		</section>
+		<footer>
+			Logged in as: <%= userName %>
+		</footer>
 	</body>
 </html>

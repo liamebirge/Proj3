@@ -1,4 +1,4 @@
-/* Module dependencies */
+/* Module dependencies*/
 
 var express = require('express'),
     routes = require('./routes'),
@@ -7,14 +7,13 @@ var express = require('express'),
     path = require('path'),
     fs = require('fs');
 
-// Authentication module.
+// Authentication module. 
+//https://www.npmjs.com/package/http-auth
 var auth = require('http-auth');
 var basic = auth.basic({
     realm: "auth-db",
-    file: __dirname + "/public/data/passwords"
+    file: __dirname + "/public/data/users.htpasswd"
 });
-
-console.log(basic);
 
 var app = express();
 
@@ -36,7 +35,7 @@ var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart();
 
 // all environments
-app.set('port', process.env.PORT || 3003);
+app.set('port', process.env.PORT || 3017);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -98,9 +97,11 @@ function initDBConnection() {
 initDBConnection();
 
 app.get('/', routes.index);
-app.get('/routes.html', routes.routes);
-app.get('/packages.html', routes.packages);
-app.get('/bookAWalk.html', routes.bookAWalk);
+app.get('/index', routes.index)
+app.get('/routes', routes.walkRoutes);
+app.get('/packages', routes.packages);
+app.get('/bookAWalk', routes.bookAWalk);
+app.get('/admin', auth.connect(basic), routes.admin);
 
 function createResponseData(id, name, value, attachments) {
 
@@ -439,8 +440,8 @@ app.get('/api/favorites', function(request, response) {
 
 });
 
-app.use(auth.connect(basic));
-app.get('/admin.html', routes.admin);
+//app.use(auth.connect(basic));
+//app.get('/admin.html', routes.admin);
 
 
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
