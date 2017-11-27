@@ -15,8 +15,6 @@ exports.bookAWalk = function(req, res){
 };
 exports.admin = function(req, res){
 	user = req.user;
-  	res.render('admin.ejs', { 
-  		userName: user, 
-  		title: 'Book A Walk'
-  	});
+	console.log(req);
+  	res.render('admin.ejs', { userName: user, title: 'Admin Page'});
 };

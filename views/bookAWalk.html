@@ -31,17 +31,17 @@
 					</a>		
 				</div>
 				<div id="form">
-					<form action="#">
+					<form onsubmit="addWalk()">
 						<fieldset class="contact">
 							<legend>Name:</legend>
-							<input type="text" name="firstName" required="required" placeholder="First Name" />*<br />
-							<input type="text" name="lastName" required="required" placeholder="Last Name" />*<br />
+							<input type="text" id="firstName" name="firstName" required="required" placeholder="First Name" />*<br />
+							<input type="text" id="lastName" name="lastName" required="required" placeholder="Last Name" />*<br />
 						</fieldset>
 						<!--phone number, email, route/length of walk-->
 						<fieldset class="contact">
 							<legend>Contact Info:</legend>
-							Phone: <input type="phoneNumber" name="phoneNumber" required="required" placeholder="###-###-####" />*<br />
-							Email: <input type="email" name="email" required="required" placeholder="example@email.com" />*<br />
+							Phone: <input type="phoneNumber" id="phoneNumber" name="phoneNumber" required="required" placeholder="###-###-####" />*<br />
+							Email: <input type="email" id="email" name="email" required="required" placeholder="example@email.com" />*<br />
 						</fieldset>
 						<fieldset class="contact">
 							<legend>Walk Info:</legend>
@@ -63,12 +63,12 @@
 							<br />
 							<div class="dateTime">
 								Date and Time:<br />
-								<input required="required" type="Date" name="walkDate" />*
-								<input required="required" type="Time" name="walkTime">*
+								<input required="required" id="walkDate" type="Date" name="walkDate" />*
+								<input required="required" id="walkTime" type="Time" name="walkTime">*
 							</div>
 							<br />
 							Comments:<br />
-							<textarea placeholder="Tell us a bit about your dog(s)!"></textarea><br />
+							<textarea id="comments" placeholder="Tell us a bit about your dog(s)!"></textarea><br />
 							<small>* = Required Field</small>
 						</fieldset>
 						<input id="submitBttn" type="submit" value="Submit" />
