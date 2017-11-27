@@ -24,7 +24,7 @@ var cloudant;
 var fileToUpload;
 
 var dbCredentials = {
-    dbName: 'my_sample_db'
+    dbName: 'dogwalking'
 };
 
 var bodyParser = require('body-parser');
@@ -35,7 +35,7 @@ var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart();
 
 // all environments
-app.set('port', process.env.PORT || 3019);
+app.set('port', process.env.PORT || 3020);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -440,10 +440,116 @@ app.get('/api/favorites', function(request, response) {
 
 });
 
-//app.use(auth.connect(basic));
-//app.get('/admin.html', routes.admin);
+//cars routes
 
+app.get('/admin', routes.index2);
+app.locals.somevar = 'testVar';
 
+app.post('/api/cars', function(request, response) {
+    
+        console.log("add a entry..");
+
+        var id;
+        var name = request.body.name;
+        var value = request.body.value;
+
+        console.log(request.body.name);
+        console.log(request.user);
+
+        if (id === undefined) {
+            // Generated random id
+            id = '';
+        }
+    
+        db.insert({
+            name: name,
+            value: value
+        }, id, function(err, doc) {
+            if (err) {
+                console.log(err);
+                response.sendStatus(500);
+            } else
+                response.sendStatus(200);
+            response.end();
+        });
+    
+    });
+    
+    app.get('/api/cars', function(request, response) {
+        
+            console.log("get walks");
+   
+            var walkList = [];
+            var i = 0;
+            db.list(function(err, body) {
+                if (!err) {
+                    var len = body.rows.length;
+                    console.log('total # of entries -> ' + len);
+                    if (len == 0) {
+                        // push sample data
+                        // save doc
+                        var docName = 'simple_doc';
+                        var docDesc = 'A simple Document';
+                        db.insert({
+                            name: docName,
+                            value: 'A sample Document'
+                        }, '', function(err, doc) {
+                            if (err) {
+                                console.log(err);
+                            } else {
+        
+                                console.log('Document : ' + JSON.stringify(doc));
+                                var responseData = createResponseData(
+                                    doc.id,
+                                    docName,
+                                    docDesc, []);
+                                walkList.push(responseData);
+                                response.write(JSON.stringify(walkList));
+                                console.log(JSON.stringify(walkList));
+                                console.log('ending response...');
+                                response.end();
+                            }
+                        });
+                    } else {
+        
+                        body.rows.forEach(function(document) {
+        
+                            db.get(document.id, {
+                                revs_info: true
+                            }, function(err, doc) {
+                                if (!err) {
+                                    var responseData = createResponseData(
+                                            doc._id,
+                                            doc.name_first,
+                                            doc.name_last,
+                                            doc.contactinfo_phone,
+                                            doc.contactinfo_email,
+                                            doc.walkinfo_packages,
+                                            doc.walkinfo_date,
+                                            doc.walkinfo_time,
+                                            doc.Comments, []);
+                                    walkList.push(responseData);
+                                    i++;
+                                    if (i >= len) {
+                                        response.write(JSON.stringify(walkList));
+                                        console.log('ending response...');
+                                        response.end();
+                                    }
+                                } else {
+                                    console.log(err);
+                                }
+                            });
+        
+                        });
+                    }
+        
+                } else {
+                    console.log(err);
+                }
+            });
+        
+        });
 http.createServer(app).listen(app.get('port'), '0.0.0.0', function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
