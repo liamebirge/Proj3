@@ -35,7 +35,7 @@ var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart();
 
 // all environments
-app.set('port', process.env.PORT || 3030);
+app.set('port', process.env.PORT || 3035);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
@@ -442,7 +442,7 @@ app.get('/api/favorites', function(request, response) {
 
 //cars routes
 
-app.get('/admin', routes.index2);
+app.get('/admin', routes.index);
 app.locals.somevar = 'testVar';
 
 app.post('/api/cars', function(request, response) {

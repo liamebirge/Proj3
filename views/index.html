@@ -14,29 +14,29 @@
     			border-color: rgb(212, 212, 212);
 			}
 			.image2 {
-				float: right;
-				display: flex;
-				justify-content: space-between;
 				border-style: ridge;
     			border-width: 10px;
     			border-color: rgb(212, 212, 212);
 
 			}
 			.image3 {
-				float: left;
-				display: flex;
-				justify-content: space-between;
 				border-style: ridge;
     			border-width: 10px;
     			border-color: rgb(212, 212, 212);
 
+			}
+			.indexImages{
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
 			}
 			h1 {
 				display: flex; 
 				justify-content:flex-start
 			}
 			section{
-				height:760px;
+				height:auto;
+				min-height:760px;
 			}
 		</style>
 	</head>
@@ -73,7 +73,10 @@
 					<li>Gordon Head Trail</li>
 					<li>Off Leash Dog Park</li>
 					<li>Playfair Park</li>
-				</ul> <img src="http://www.aacounty.org/sebin/n/m/dogpark.jpg" alt="off-leashdogpark" class="image2" style="width:580px;height:300px;" /><img src=https://www.rover.com/blog/wp-content/uploads/2015/01/renton-dog-park.jpg class="image3" alt="off-leashdog" style="width:580px;height:300px;" />
+				</ul> 
+				<div class="indexImages">
+					<img src="http://www.aacounty.org/sebin/n/m/dogpark.jpg" alt="off-leashdogpark" class="image2" style="width:580px;height:300px;" /><img src=https://www.rover.com/blog/wp-content/uploads/2015/01/renton-dog-park.jpg class="image3" alt="off-leashdog" style="width:580px;height:300px;" />
+				</div>
 				<br />
 		</section>
 		<footer>
