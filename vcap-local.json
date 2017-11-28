@@ -1,4 +1,24 @@
 {
+    "AvailabilityMonitoring": [
+        {
+            "credentials": {
+                "cred_url": "https://perfbroker.ng.bluemix.net",
+                "token": "Lt3hKWdB7F0ypx+f/5J46LgZax8AL4ncH5c9zWlxQfr5hRkfnBf20fnnjrq96+2i7CgnanxHCjCAE5WZmAwG4lX1x+132v3G8DZzoMNwPeo="
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "AvailabilityMonitoring",
+            "provider": null,
+            "plan": "Lite",
+            "name": "availability-monitoring-auto",
+            "tags": [
+                "ibm_created",
+                "bluemix_extensions",
+                "dev_ops",
+                "lite"
+            ]
+        }
+    ],
     "cloudantNoSQLDB": [
         {
             "credentials": {
