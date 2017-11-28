@@ -1,6 +1,6 @@
 // index.js
 
-var REST_DATA = 'api/cars';
+var REST_DATA = 'api/walks';
 var defaultItems = [
     
     ];
@@ -13,16 +13,24 @@ function encodeUriAndQuotes(untrustedStr) {
 function addWalk() {
     console.log("adding walk");
     //var data = document.getElementById('newcar').value;
+    var firstName = document.getElementById('firstName').value,
+        lastName = document.getElementById('lastName').value,
+        phoneNumber = document.getElementById('phoneNumber').value,
+        email = document.getElementById('email').value,
+        walkSelect = document.getElementById('walkSelect').value,
+        walkDate = document.getElementById('walkDate').value,
+        walkTime = document.getElementById('walkTime').value,
+        comments = document.getElementById('comments').value
     var data = {
-        _id: "Dog Walking Client",
-        name_first: document.getElementById('firstName').value,
-        name_last: document.getElementById('lastName').value,
-        contactinfo_phone: document.getElementById('phoneNumber').value,
-        contactinfo_email: document.getElementById('email').value,
-        walkinfo_packages: document.getElementById('walkSelect').value,
-        walkinfo_date: document.getElementById('walkDate').value,
-        walkinfo_time: document.getElementById('walkTime').value,
-        comments: document.getElementById('comments').value
+        _id: "Dog Walking Client" + item,
+        name_first: firstName,
+        name_last: lastName,
+        contactinfo_phone: phoneNumber,
+        contactinfo_email: email,
+        walkinfo_packages: walkSelect,
+        walkinfo_date: walkDate,
+        walkinfo_time: walkTime,
+        comments: comments
     };
     item++;
     xhrPost(REST_DATA, data, function(item) {
@@ -42,11 +50,9 @@ function addItem(item) {
         if (id) {
             row.setAttribute('data-id', id);
         }
-    
-
         row.innerHTML = "<td>"+item.value+"</td>";
     
-        var table = document.getElementById('cars');
+        var table = document.getElementById('walkTable');
         table.lastChild.appendChild(row);
 
     }

@@ -15,24 +15,8 @@ exports.bookAWalk = function(req, res){
 };
 exports.admin = function(req, res){
 	user = req.user;
-	first_name = req.name_first;
-	last_name = req.name_last;
-	contact_phone = req.contactinfo_phone;
-	contact_email = req.contactinfo_email;
-	walk_package = req.walkinfo_packages;
-	walk_date = req.walkinfo_date;
-	walk_time = req.walkinfo_time;
-	walk_comments = req.Comments;
 	console.log(req);
-  	res.render('admin.ejs', { userName: user,
-  		name1: first_name,
-  		name2: last_name,
-  		phone: contact_phone,
-  		email: contact_email,
-  		package: walk_package,
-  		date: walk_date,
-  		time: walk_time,
-  		comments: walk_comments,
-  		title: 'Admin Page', 
+  res.render('admin.ejs', { userName: user,
+  		title: 'Admin Page'
   		});
 };

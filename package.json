@@ -7,9 +7,10 @@
   },
   "dependencies": {
     "body-parser": "1.17.x",
+    "cf": "0.0.3",
     "cloudant": "1.7.x",
     "connect-multiparty": "2.0.x",
-    "ejs": "2.5.x",
+    "ejs": "^2.5.7",
     "errorhandler": "1.5.x",
     "express": "4.15.x",
     "http-auth": "^3.2.3",

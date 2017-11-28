@@ -35,14 +35,12 @@ var multipart = require('connect-multiparty')
 var multipartMiddleware = multipart();
 
 // all environments
-app.set('port', process.env.PORT || 3037);
+app.set('port', process.env.PORT || 3043);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 app.use(logger('dev'));
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -445,7 +443,7 @@ app.get('/api/favorites', function(request, response) {
 app.get('/admin', routes.index);
 app.locals.somevar = 'testVar';
 
-app.post('/api/cars', function(request, response) {
+app.post('api/walks', function(request, response) {
     
         console.log("add a entry..");
 
@@ -475,7 +473,7 @@ app.post('/api/cars', function(request, response) {
     
     });
     
-    app.get('/api/cars', function(request, response) {
+    app.get('api/walks', function(request, response) {
         
             console.log("get walks");
    

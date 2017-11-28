@@ -5,7 +5,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="/../public/style/adminStyle.css" />
-		<script type="text/javascript" src="../public/scripts/ejs_production.js"></script>
+		<script type="text/javascript" src="/../public/scripts/ejs.min.js"></script>
+		<script type="text/javascript" src="/scripts/index2.js"></script>
 	</head>
 	<body>
 		<header>
@@ -25,14 +26,14 @@
 					<td>Comments</td>
 				</tr>
 				<tr>
-					<td><%= name1 %></td>
-					<td><%= name2 %></td>
-					<td><%= phone %></td>
-					<td><%= email %></td>
-					<td><%= package %></td>
-					<td><%= date %></td>
-					<td><%= time %></td>
-					<td><%= comments %></td>
+					<%= name_first %>
+					<%= name_last %>
+					<%= contactinfo_phone %>
+					<%= contactinfo_email %>
+					<%= walkinfo_packages %>
+					<%= walkinfo_date %>
+					<%= walkinfo_time %>
+					<%= comments %>
 				</tr>
 			</table>
 			<button onclick="window.location.reload();">Refresh</button>
