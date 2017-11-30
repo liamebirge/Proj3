@@ -33,6 +33,7 @@ function addWalk() {
         comments: comments
     };
     item++;
+    console.log(data);
     xhrPost(REST_DATA, data, function(item) {
         
     }, function(err) {
