@@ -101,25 +101,20 @@ app.get('/packages', routes.packages);
 app.get('/bookAWalk', routes.bookAWalk);
 app.get('/admin', auth.connect(basic), routes.admin);
 
-function createResponseData(id, name, value, attachments) {
+function createResponseData(_id, name_first, name_last, contactinfo_phone, contactinfo_email, walkinfo_packages, walkinfo_date, walkinfo_time, Comments) {
 
     var responseData = {
-        id: id,
-        name: sanitizeInput(name),
-        value: sanitizeInput(value),
-        attachements: []
+        _id: sanitizeInput(_id),
+        name_first: sanitizeInput(name_first),
+        name_last: sanitizeInput(name_last),
+        contactinfo_phone: sanitizeInput(contactinfo_phone),
+        contactinfo_email: sanitizeInput(contactinfo_email),
+        walkinfo_packages: sanitizeInput(walkinfo_packages),
+        walkinfo_date: sanitizeInput(walkinfo_date),
+        walkinfo_time: sanitizeInput(walkinfo_time),
+        Comments: sanitizeInput(Comments)
     };
 
-
-    attachments.forEach(function(item, index) {
-        var attachmentData = {
-            content_type: item.type,
-            key: item.key,
-            url: '/api/favorites/attach?id=' + id + '&key=' + item.key
-        };
-        responseData.attachements.push(attachmentData);
-
-    });
     return responseData;
 }
 
@@ -443,7 +438,7 @@ app.get('/api/favorites', function(request, response) {
 app.get('/admin', routes.index);
 app.locals.somevar = 'testVar';
 
-app.post('api/walks', function(request, response) {
+app.post('/api/walks', function(request, response) {
     
         console.log("add a entry..");
 
@@ -473,7 +468,7 @@ app.post('api/walks', function(request, response) {
     
     });
     
-    app.get('api/walks', function(request, response) {
+    app.get('/api/walks', function(request, response) {
         
             console.log("get walks");
    
@@ -525,9 +520,10 @@ app.post('api/walks', function(request, response) {
                                             doc.walkinfo_packages,
                                             doc.walkinfo_date,
                                             doc.walkinfo_time,
-                                            doc.Comments, []);
+                                            doc.Comments);
                                     walkList.push(responseData);
                                     i++;
+                                    console.log(responseData)
                                     if (i >= len) {
                                         response.write(JSON.stringify(walkList));
                                         console.log('ending response...');

@@ -55,12 +55,12 @@ function addItem(item) {
     
         var table = document.getElementById('walkTable');
         table.lastChild.appendChild(row);
-
+console.log(table);
     }
     
 function loadItems() {
     xhrGet(REST_DATA, function(data) {
-
+        console.log("somehtign");
         console.log(data);
         
         var receivedItems = data || [];
@@ -73,11 +73,13 @@ function loadItems() {
                 items.push(item);
             }
         }
+        console.log(items);
         var hasItems = items.length;
         if (!hasItems) {
             items = defaultItems;
         }
         for (i = 0; i < items.length; ++i) {
+            console.log(items[i]);
             addItem(items[i]);
         }
 
